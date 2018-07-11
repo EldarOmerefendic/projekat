@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+
+body  {
+	background-image: url("bg.png");
+	background-color: white;
+	font-family: "Verdana", sans-serif;
+	padding: 10px;
+}
+
+
+#login {
+	width: 500px;
+	align:center;
+	height: 250px;
+	background: white;
+	box-shadow: 1px 1px 1px 1px #18a8f5;
+	margin: auto;
+	font-size:20px;
+	position:relative;
+	color: gray;
+	top:150px;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+
+input[type=submit] {
+    width: 470px;
+    background-color: #58aae8;
+    color: white;
+    padding: 14px 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+input[type=submit]:hover {
+    background-color: #0a76c8;
+}
+
+input[type=text],input[type=password]{
+    width: 250px;
+    padding: 10px 10px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
