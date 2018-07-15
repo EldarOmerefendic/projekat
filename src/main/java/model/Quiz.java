@@ -23,10 +23,6 @@ public class Quiz implements Serializable {
 	private int isActive;
 
 	private String quizName;
-
-	@Column(name="user_id", nullable=false, length=11,
-	        updatable=false, insertable=false)
-	private int user_id;
 	
 	//bi-directional many-to-one association to User
 	@ManyToOne

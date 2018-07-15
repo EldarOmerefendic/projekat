@@ -12,7 +12,7 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Question.findAll", query="SELECT p FROM Question p")
+@NamedQuery(name="Question.findAll", query="SELECT q FROM Question q")
 public class Question implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -33,7 +33,7 @@ public class Question implements Serializable {
 	//bi-directional many-to-many association to Answer
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(
-		name="auestion_answer"
+		name="question_answer"
 		, joinColumns={
 			@JoinColumn(name="question_id")
 			}

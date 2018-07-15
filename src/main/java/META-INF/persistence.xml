@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="projekat" transaction-type="RESOURCE_LOCAL">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.Answer</class>
 		<class>model.Question</class>
 		<class>model.Quiz</class>
 		<class>model.Result</class>
 		<class>model.User</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:derby:/home/samra/MyDB;create=true;upgrade=true"/>
-			<property name="javax.persistence.jdbc.user" value="user"/>
-			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+			<!--  property name="eclipselink.ddl-generation" value="create-or-extend-tables" /-->
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />		
+			<property name="eclipselink.ddl-generation.output-mode" value="database"/> 	
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:derby://localhost:1527/projekatDB;create=true" />
+			<property name="javax.persistence.jdbc.user" value="eldar" />
+			<property name="javax.persistence.jdbc.password" value="6969" />
 		</properties>
 	</persistence-unit>
 </persistence>

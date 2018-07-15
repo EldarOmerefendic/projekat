@@ -34,7 +34,7 @@ public class QuizDAO extends AbstractDAO {
 	public List<Quiz> findByUserId(int userId) {
 		EntityManager em = createEntityManager();
 		Query q = em.createQuery("SELECT u FROM Quiz u WHERE u.user_id = :userId").setParameter("userId", userId);
-		List<Quiz> resultList = q.getResultList();
+		List<Quiz> resultList = (List<Quiz>)q.getResultList();
 		em.close();
 		return resultList;
 	}

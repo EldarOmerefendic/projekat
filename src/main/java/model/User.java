@@ -10,7 +10,7 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="User.findAll", query="SELECT k FROM User k")
+@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -27,7 +27,7 @@ public class User implements Serializable {
 	private String username;
 
 	//bi-directional many-to-one association to Quiz
-	@OneToMany(mappedBy="User", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="user", cascade = CascadeType.ALL)
 	private List<Quiz> quizzes;
 
 	public User() {

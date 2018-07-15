@@ -1,0 +1,14 @@
+body  {
+	background-image: url("../images/bg.png");
+	background-color: white;
+	font-family: "Verdana", sans-serif;
+}
+
+.mdl-layout {
+	justify-content: center;
+	align-items: center;
+}
+.mdl-layout__content {
+	padding: 24px;
+	flex: none;
+}
